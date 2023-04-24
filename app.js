@@ -17,7 +17,7 @@ const options = {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer ${openai.apiKey}'
+      'Authorization': `Bearer ${openai.apiKey}`
     }
   };
 
