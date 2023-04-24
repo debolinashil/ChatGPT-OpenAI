@@ -43,11 +43,11 @@ app.post("/", (req, res) => {
         let data="";
         response.on("data", (chunk)=>{
             data+=chunk;
-            // console.log(data);
+            console.log(data);
         })
         response.on("end", ()=>{
             const resData = JSON.parse(data);
-            // console.log(resData);
+            console.log(resData);
             const openaiResponse = resData.choices[0].message.content;
             chatGPT = generateHtml(userText, openaiResponse);
             // console.log(chatGPT);
